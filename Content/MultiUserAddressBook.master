@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MultiUserAddressBook.master.cs" Inherits="Content_MultiUserAddressBook" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multiuser AddressBook</title>
+    <link href="Css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Js/bootstrap.min.js"></script>
+    <%--<link href="Css/Cust.css" rel="stylesheet" />--%>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:white">
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <div class="row" style="margin: 7px; padding: 10px; background-image: url('/Content/Image/header.jpg');">
+
+                <div class="col-md-4">
+                    <h2 style="color: white; padding-top: 17px; padding-bottom:17px">MultiUser Address Book</h2>
+                </div>
+                <div class="col-md-8" style="text-align: right; color: white; padding-top: 45px">
+
+                    <asp:HyperLink runat="server" ID="HyperLink1" Text="Country" class="btn btn-outline-info btn-md button1 " NavigateUrl="~/AdminPanel/Country/List" Style="color: white" ToolTip="In this link, show counrty list and you can delete and update record"></asp:HyperLink>&nbsp;&nbsp   
+                     <asp:HyperLink runat="server" ID="HyperLink2" Text="State" class="btn btn-outline-warning btn-md button1 " NavigateUrl="~/AdminPanel/State/List" Style="color: white"></asp:HyperLink>
+                    &nbsp;&nbsp  
+                     <asp:HyperLink runat="server" ID="HyperLink3" Text="City" class="btn btn-outline-info btn-md button1" NavigateUrl="~/AdminPanel/City/List" Style="color: white"></asp:HyperLink>&nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="HyperLink4" Text="ContactCategory" class="btn btn-outline-warning btn-md button1" NavigateUrl="~/AdminPanel/ContactCategory/List" Style="color: white"></asp:HyperLink>&nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="HyperLink5" Text="Contact" class="btn btn-outline-info btn-md button1" NavigateUrl="~/AdminPanel/Contact/List" Style="color: white"></asp:HyperLink>
+
+                </div>
+            </div>
+            <hr />
+
+            <div>
+                <div class="container-fluid">
+
+
+                    <div class="col-md-12" align="right">
+                        <b>
+                            <asp:Label ID="lblmessage" runat="server" EnableViewState="false"></asp:Label></b> &nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp
+                        <asp:Button ID="btnLogout" runat="server" Class="btn btn-danger btn-sm " Text="Logout" OnClick="btnLogout_Click" />
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <hr />
+            <div class="row" style="margin: 7px; padding: 10px; background-image: url('/Content/Image/header.jpg');">
+                <div class="col-md-12 text-center" style="color: white">
+                    <strong>Savani Birju Rajeshbhai</strong> &nbsp;&nbsp | &nbsp;&nbsp
+                    <strong>190540107188</strong>&nbsp;&nbsp | &nbsp;&nbsp
+                    <strong><a href="https://mail.google.com/mail/u/1/#inbox" style="color: black">190540107188@darshan.ac.in</a></strong>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
